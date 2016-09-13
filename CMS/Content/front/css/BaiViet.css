@@ -3,22 +3,31 @@
 
     .BaiViet > .TieuDe {
         font-size: 2.2em;
-        border-bottom: solid 1px #ff0000;
-        color: #ff0000;
+        color: #f44336;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        background-color: #fff;
+        margin-top:0.5em;
     }
 
     .BaiViet > .NoiDung {
         text-align: justify;
         font-size: 1.2em;
+        margin-top:1.5em;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        background-color: #fff;
+        padding:1em;
     }
 
 .GoiY {
+    margin-top:1em;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: #fff;
 }
 
     .GoiY > .TieuDe {
         font-size: 2.2em;
-        border-bottom: solid 1px #ff0000;
-        color: #ff0000;
+        border-bottom: solid 1px #f44336;
+        color: #f44336;
     }
 
     .GoiY > ul {
@@ -32,7 +41,7 @@
         }
 
             .GoiY > ul > li > span {
-                color: #ff0000;
+                color: #f44336;
             }
 
             .GoiY > ul > li > a {
@@ -42,30 +51,36 @@
                 }
 
 .Visa_ThueXe {
-    padding-top:1em;
+    padding-top: 1em;
 }
 
+    .Visa_ThueXe > .TieuDe {
+        color: #f44336;
+        font-size: 2.5em;
+        margin: 0;
+    }
+
     .Visa_ThueXe .item {
-        border:solid 1px #ff0000;
-        border-radius:10px;
-        padding:0.2em;
+        padding: 0.2em;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        background-color: #fff;
     }
 
         .Visa_ThueXe .item > .anh {
-            width:30%;
-            float:left;
+            width: 30%;
+            float: left;
         }
 
         .Visa_ThueXe .item > .TieuDe {
-            width:68%;
-            float:right;
-            text-align:left;
-            color:#ff0000;
-            font-size:1.5em;
+            width: 68%;
+            float: right;
+            text-align: left;
+            color: #f44336;
+            font-size: 1.5em;
         }
 
         .Visa_ThueXe .item > .GioiThieu {
-            width:68%;
-            float:right;
-            text-align:justify;
+            width: 68%;
+            float: right;
+            text-align: justify;
         }

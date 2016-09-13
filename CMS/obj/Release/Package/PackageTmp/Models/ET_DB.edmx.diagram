@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c2957f7744264f1eb6ac8d5cdea6e9ed" Name="Diagram1" ZoomLevel="76">
+        <EntityTypeShape EntityType="ETModel.Banner" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.Category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.CategoryProduct" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.Post" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.User" Width="1.5" PointX="4.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.Video" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.webpages_Membership" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.webpages_OAuthMembership" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ETModel.webpages_Roles" Width="1.5" PointX="7" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="ETModel.FK_dbo_Category_dbo_Category_idCategoryParent" ManuallyRouted="false" />
+        <AssociationConnector Association="ETModel.FK_dbo_CategoryProduct_dbo_CategoryProduct_idCategoryParent" ManuallyRouted="false" />
+        <AssociationConnector Association="ETModel.webpages_UsersInRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ETModel.Product" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ETModel.CustomerRegister" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ETModel.Order" Width="1.5" PointX="0.75" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

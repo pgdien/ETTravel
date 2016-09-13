@@ -61,6 +61,7 @@
                     note: data.note,
                     description: data.description,
                     published: data.published,
+                    vehicle: data.vehicle,
                     image: data.image,
                     tags: data.tags,
                     version: data.version,

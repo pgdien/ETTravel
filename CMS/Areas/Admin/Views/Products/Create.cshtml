@@ -73,6 +73,14 @@
                                         <input type="number" class="form-control" id="price" name="price" ng-model="product.price" />
                                         <label for="price">Giá</label>
                                     </div>
+                                    <div class="form-group ">
+                                        <select id="status" name="published" class="form-control" ng-model="product.vehicle">
+                                            <option value="0" ng-selected="product.vehicle == 0">Ô tô</option>
+                                            <option value="1" ng-selected="product.vehicle == 1">Máy bay</option>
+                                            <option value="2" ng-selected="product.vehicle == 2">Tàu thủy</option>
+                                        </select>
+                                        <label for="status">Phương tiện</label>
+                                    </div>
                                     <div class="form-group">
                                         <input type="number" class="form-control" id="guestNumber" name="guestNumber" ng-model="product.guestNumber" />
                                         <label for="guestNumber">Số người</label>

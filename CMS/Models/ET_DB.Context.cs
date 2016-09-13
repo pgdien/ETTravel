@@ -34,8 +34,8 @@ namespace CMS.Models
         public virtual DbSet<webpages_Membership> webpages_Membership { get; set; }
         public virtual DbSet<webpages_OAuthMembership> webpages_OAuthMembership { get; set; }
         public virtual DbSet<webpages_Roles> webpages_Roles { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<CustomerRegister> CustomerRegister { get; set; }
         public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
     }
 }

@@ -23,7 +23,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content='@((ViewBag.Image!=null)?ViewBag.Image:"")' />
     <meta property="og:description" content='@((ViewBag.Description!=null)?ViewBag.Description:"")' />
-    <meta property="og:site_name" content="Dầu nhớt chính hãng Mobil" />
+    <meta property="og:site_name" content="ET Travel" />
     <meta name="geo.placename" content="1/97, Nguyễn Công Hòa, Hải Phòng" />
     <meta name="geo.region" content="VN-HP" />
     <meta name="geo.position" content="20.845268;106.665318" />
@@ -31,7 +31,6 @@
     <link rel="image_src" href='@((ViewBag.Image!=null)?ViewBag.Image:"")' />
     <!--Bootstrap-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <!--Message-->
     <link href="~/Content/admin/css/theme-default/libs/toastr/toastr.min.css" rel="stylesheet" />
@@ -39,8 +38,6 @@
     <link href="~/Content/front/css/Site.css" rel="stylesheet" />
     <link href="~/Content/front/css/DuLich.css" rel="stylesheet" />
     <link href="~/Content/front/css/BaiViet.css" rel="stylesheet" />
-    <!--Ck Editor-->
-    <script src="~/Content/front/js/modernizr.custom.js"></script>
 </head>
 <body ng-app="frontApp">
     <header class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Header">
@@ -60,7 +57,7 @@
                         <a href="/bai-viet/gioi-thieu-19">Giới thiệu</a>
                     </li>
                     <li>
-                        <a href="/bai-viet/huong-dan-thanh-toan-18">Hướng dẫn</a>
+                        <a href="/danh-muc-bai-viet/thong-tin-149">Thông tin</a>
                     </li>
                     <li>
                         <a href="/lien-he">Liên hệ</a>
@@ -73,7 +70,7 @@
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 Logo">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
                 <a href="@Url.Action("Index","Home")" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img class="img-responsive Logo" src="~/Content/Images/images/logo.png" />
+                    <img class="img-responsive Logo" title="ET Travel" alt="ET Travel" src="~/Content/Images/images/logo.png" />
                 </a>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 HotLine">
@@ -81,7 +78,7 @@
                     <span class="fa fa-headphones"></span>
                 </div>
                 <div class="right">
-                    <p class="Phone">031.361.1158</p>
+                    <a class="Phone" href="tel:0313611158">0313.611.158</a>
                     <p class="GhiChu">Tổng đài tư vấn miễn phí</p>
                 </div>
             </div>
@@ -90,19 +87,13 @@
                     <span class="fa fa-phone"></span>
                 </div>
                 <div class="right">
-                    <p class="Phone">0906.02.82.11</p>
-                    <p class="Phone">0981.200.288</p>
+                    <a class="Phone" href="tel:0906028211">0906.02.82.11</a>
+                    <a class="Phone" href="tel:0981200288">0981.200.288</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 Facebook">
-                <div class="left">
-                    <span class="fa fa-facebook"></span>
-                </div>
-                <div class="right">
-                    <a href="https://www.facebook.com/DULICH.ET" class="FacebookText">Facebook</a>
-                    <p class="GhiChu">Kết nối ET Travel</p>
-                </div>
-            </div>
+            <a href="http://phongveskyline.com/" target="_blank" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 Facebook">
+                <img class="img-responsive" src="~/Content/Images/images/SkyLine.png" />
+            </a>
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 BotHeader">
@@ -155,15 +146,7 @@
 
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 TopFooter">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left">
-                <img class="img-responsive anh" src="~/Content/Images/images/logo.png" />
-                <p class="TenCTy">ET TRAVEL</p>
-                <p class="KhauHieu">UY TÍN - AN TOÀN - TIN CẬY</p>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <p class="LienHe"><span class="fa fa-home"></span> 185 Nguyễn Đức Cảnh, Lê Chân, Hải Phòng</p>
-                    <p class="LienHe"><span class="fa fa-phone"></span> 0906.02.82.11 - 0981.200.288</p>
-                    <p class="LienHe"><span class="fa fa-envelope-o"></span> Contact@gmail.com</p>
-                </div>
-
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDULICH.ET&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="border:none;overflow:hidden; width:100%; height:200px" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right">
                 <p><span class="fa fa-map-marker"></span> TÌM CHÚNG TÔI</p>
@@ -200,11 +183,11 @@
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 BotFooter">
-            <p class="TieuDe">ET Travel - 2016 - Designed by Kết Nối Trẻ JSC</p>
+            <p class="TieuDe">ET Travel - 2016 - Designed by <a href="http://ketnoitrejsc.com/" target="_blank">Kết Nối Trẻ JSC</a></p>
         </div>
     </footer>
-    <!--Share Facebook-->
-    @*<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>*@
+
+
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
     <!--Bootstrap-->
@@ -257,6 +240,9 @@
     <script src="~/Scripts/front/pagination/dirPagination.min.js"></script>
     <!--Order-->
     <script src="~/Scripts/front/themorderController.js"></script>
-    
+
+    <!--Ck Editor-->
+    <script src="~/Content/front/js/modernizr.custom.js"></script>
+
 </body>
 </html>

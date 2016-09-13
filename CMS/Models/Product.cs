@@ -34,6 +34,7 @@ namespace CMS.Models
         public string tags { get; set; }
         public string version { get; set; }
         public Nullable<int> deleted { get; set; }
+        public Nullable<int> vehicle { get; set; }
         public Nullable<int> price { get; set; }
         public string feature { get; set; }
         public string metadescription { get; set; }

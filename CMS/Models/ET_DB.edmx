@@ -81,7 +81,7 @@
           <Property Name="idOrder" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="hoTen" Type="nvarchar" MaxLength="50" />
           <Property Name="diaChi" Type="nvarchar" MaxLength="100" />
-          <Property Name="SDT" Type="nchar" MaxLength="15" />
+          <Property Name="SDT" Type="nchar" MaxLength="15" Nullable="false" />
           <Property Name="email" Type="nchar" MaxLength="50" />
           <Property Name="tour" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="timeStart" Type="datetime" />
@@ -137,6 +137,7 @@
           <Property Name="tags" Type="nvarchar(max)" />
           <Property Name="version" Type="varchar" MaxLength="50" />
           <Property Name="deleted" Type="int" />
+          <Property Name="vehicle" Type="int" />
           <Property Name="price" Type="int" />
           <Property Name="feature" Type="ntext" />
           <Property Name="metadescription" Type="nvarchar(max)" />
@@ -477,10 +478,32 @@
             <End Role="User" EntitySet="User" />
             <End Role="webpages_Roles" EntitySet="webpages_Roles" />
           </AssociationSet>
-          <EntitySet Name="Product" EntityType="ETModel.Product" />
           <EntitySet Name="CustomerRegister" EntityType="ETModel.CustomerRegister" />
           <EntitySet Name="Order" EntityType="ETModel.Order" />
+          <EntitySet Name="Product" EntityType="ETModel.Product" />
         </EntityContainer>
+        <EntityType Name="CustomerRegister">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="idOrder" />
+          </Key>
+          <Property Name="idOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="diaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="tour" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="timeStart" Type="DateTime" Precision="3" />
+          <Property Name="guestNumber" Type="Int32" />
+        </EntityType>
         <EntityType Name="Product">
           <Key>
             <PropertyRef Name="idProduct" />
@@ -505,34 +528,13 @@
           <Property Name="tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="version" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="deleted" Type="Int32" />
+          <Property Name="vehicle" Type="Int32" />
           <Property Name="price" Type="Int32" />
           <Property Name="feature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="metadescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="metakewords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="robots" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="CustomerRegister">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="phone" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Order">
-          <Key>
-            <PropertyRef Name="idOrder" />
-          </Key>
-          <Property Name="idOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="hoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="diaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="SDT" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="tour" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="timeStart" Type="DateTime" Precision="3" />
-          <Property Name="guestNumber" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -692,38 +694,6 @@
               <ScalarProperty Name="RoleId" ColumnName="RoleId" />
             </EndProperty>
           </AssociationSetMapping>
-          <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="ETModel.Product">
-              <MappingFragment StoreEntitySet="Product">
-                <ScalarProperty Name="robots" ColumnName="robots" />
-                <ScalarProperty Name="author" ColumnName="author" />
-                <ScalarProperty Name="metakewords" ColumnName="metakewords" />
-                <ScalarProperty Name="metadescription" ColumnName="metadescription" />
-                <ScalarProperty Name="feature" ColumnName="feature" />
-                <ScalarProperty Name="price" ColumnName="price" />
-                <ScalarProperty Name="deleted" ColumnName="deleted" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="tags" ColumnName="tags" />
-                <ScalarProperty Name="image" ColumnName="image" />
-                <ScalarProperty Name="published" ColumnName="published" />
-                <ScalarProperty Name="description" ColumnName="description" />
-                <ScalarProperty Name="note" ColumnName="note" />
-                <ScalarProperty Name="content" ColumnName="content" />
-                <ScalarProperty Name="alias" ColumnName="alias" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="guestNumber" ColumnName="guestNumber" />
-                <ScalarProperty Name="nightNumber" ColumnName="nightNumber" />
-                <ScalarProperty Name="dateNumber" ColumnName="dateNumber" />
-                <ScalarProperty Name="timeStart" ColumnName="timeStart" />
-                <ScalarProperty Name="timeModified" ColumnName="timeModified" />
-                <ScalarProperty Name="timeCreated" ColumnName="timeCreated" />
-                <ScalarProperty Name="idUserModified" ColumnName="idUserModified" />
-                <ScalarProperty Name="idUserCreated" ColumnName="idUserCreated" />
-                <ScalarProperty Name="idCategoryProduct" ColumnName="idCategoryProduct" />
-                <ScalarProperty Name="idProduct" ColumnName="idProduct" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CustomerRegister">
             <EntityTypeMapping TypeName="ETModel.CustomerRegister">
               <MappingFragment StoreEntitySet="CustomerRegister">
@@ -745,6 +715,39 @@
                 <ScalarProperty Name="diaChi" ColumnName="diaChi" />
                 <ScalarProperty Name="hoTen" ColumnName="hoTen" />
                 <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="ETModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="robots" ColumnName="robots" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="metakewords" ColumnName="metakewords" />
+                <ScalarProperty Name="metadescription" ColumnName="metadescription" />
+                <ScalarProperty Name="feature" ColumnName="feature" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+                <ScalarProperty Name="deleted" ColumnName="deleted" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="tags" ColumnName="tags" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="published" ColumnName="published" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="guestNumber" ColumnName="guestNumber" />
+                <ScalarProperty Name="nightNumber" ColumnName="nightNumber" />
+                <ScalarProperty Name="dateNumber" ColumnName="dateNumber" />
+                <ScalarProperty Name="timeStart" ColumnName="timeStart" />
+                <ScalarProperty Name="timeModified" ColumnName="timeModified" />
+                <ScalarProperty Name="timeCreated" ColumnName="timeCreated" />
+                <ScalarProperty Name="idUserModified" ColumnName="idUserModified" />
+                <ScalarProperty Name="idUserCreated" ColumnName="idUserCreated" />
+                <ScalarProperty Name="idCategoryProduct" ColumnName="idCategoryProduct" />
+                <ScalarProperty Name="idProduct" ColumnName="idProduct" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

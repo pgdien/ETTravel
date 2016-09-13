@@ -1,0 +1,77 @@
+﻿.BaiViet {
+}
+
+    .BaiViet > .TieuDe {
+        font-size: 2.2em;
+        border-bottom: solid 1px #ff0000;
+        color: #ff0000;
+    }
+
+    .BaiViet > .NoiDung {
+        text-align: justify;
+        font-size: 1.2em;
+    }
+
+.GoiY {
+}
+
+    .GoiY > .TieuDe {
+        font-size: 2.2em;
+        border-bottom: solid 1px #ff0000;
+        color: #ff0000;
+    }
+
+    .GoiY > ul {
+        text-align: left;
+        padding: 0.5em;
+    }
+
+        .GoiY > ul > li {
+            list-style: none;
+            font-size: 1.2em;
+        }
+
+            .GoiY > ul > li > span {
+                color: #ff0000;
+            }
+
+            .GoiY > ul > li > a {
+            }
+
+                .GoiY > ul > li > a:hover {
+                }
+
+.Visa_ThueXe {
+    padding-top: 1em;
+}
+
+    .Visa_ThueXe > .TieuDe {
+        color: #ff0000;
+        font-size: 2.5em;
+        margin: 0;
+    }
+
+    .Visa_ThueXe .item {
+        border: solid 1px #ff0000;
+        border-radius: 10px;
+        padding: 0.2em;
+    }
+
+        .Visa_ThueXe .item > .anh {
+            width: 30%;
+            float: left;
+        }
+
+        .Visa_ThueXe .item > .TieuDe {
+            width: 68%;
+            float: right;
+            text-align: left;
+            color: #ff0000;
+            font-size: 1.5em;
+        }
+
+        .Visa_ThueXe .item > .GioiThieu {
+            width: 68%;
+            float: right;
+            text-align: justify;
+        }

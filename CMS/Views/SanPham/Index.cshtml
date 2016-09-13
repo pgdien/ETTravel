@@ -11,7 +11,7 @@
     <div class="right">
         <p class="TieuDe">{{product.title}}</p>
         <p class="HanhTrinh"><span>Thời gian:</span> {{product.dateNumber}} ngày {{product.nightNumber}} đêm</p>
-        <p class="HanhTrinh"><span>Phương tiện:</span> Ô tô</p>
+        <p class="HanhTrinh"><span>Phương tiện:</span> <span class="fa " ng-class="{'fa-car':product.vehicle==0,'fa-plane':product.vehicle==1,'fa-ship':product.vehicle==2}"></span></p>
         <p class="HanhTrinh"><span>Khởi hành:</span> {{product.timeStart | date:'dd-MM-yyyy'}}</p>
         <p class="DonGia"><span>Đơn giá:</span> {{product.price}} đ/người</p>
         <div class="GioiThieu" ng-bind-html="product.description"></div>
